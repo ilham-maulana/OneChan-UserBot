@@ -1,6 +1,6 @@
 {
-  "name": "Telegram OneChan-UserBot",
-  "description": "[OneChan-UserBot] A modular Telegram userbot running on Python 3.8+ with an sqlalchemy database.",
+  "name": "Telegram ShinoaHiiragi",
+  "description": "[ShinoaHiiragi] Bot Telegram",
   "logo": "https://telegra.ph/file/ba033bb7582b700f751c4.jpg",
   "keywords": [
     "telegram",
@@ -9,9 +9,9 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/Ilham94/OneChan-UserBot",
+  "repository": "https://github.com/RizkyAkame/ShinoaHiiragi",
   "website": "https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02",
-  "success_url": "https://t.me/ilham_maulana1",
+  "success_url": "https://t.me/rizkynfs",
   "stack": "container",
   "env": {
     "API_KEY": {
@@ -85,7 +85,7 @@
     },
     "BOTLOG": {
       "description": "Incase you want to turn off logging, put this to false",
-      "value": "False"
+      "value": "true"
     },
     "DEEZER_ARL_TOKEN": {
       "description": "Fill of your Deezer ARL token. Get from https://notabug.org/RemixDevs/DeezloaderRemix/wiki/Login+via+userToken",
@@ -170,7 +170,7 @@
     },
     "DEFAULT_BIO": {
       "description": "Default profile bio.",
-      "value": "[PM = Report Spam] I ❤ ️ShinoaBot",
+      "value": "[PM = Report Spam] I ❤ ️ ShinoaHiiragi",
       "required": false
     },
     "ALIVE_NAME": {
