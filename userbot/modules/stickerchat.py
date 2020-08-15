@@ -6,11 +6,9 @@
 # Port to UserBot by @MoveAngel
 """    Credits to ftg and One4uBot plugins, cmd is .pch    """
 
-import logging
 import requests
 import base64
 import json
-import os
 import telethon
 
 from PIL import Image
@@ -38,13 +36,12 @@ if 1 == 1:
         "admin": "admin",
         "creator": "creator",
         "hidden": "hidden",
-        "channel": "Channel"
-    }
+        "channel": "Channel"}
 
     config = dict({"api_url": "http://api.antiddos.systems",
-                                          "username_colors": ["#fb6169", "#faa357", "#b48bf2", "#85de85",
-                                                              "#62d4e3", "#65bdf3", "#ff5694"],
-                                          "default_username_color": "#b48bf2"})
+                   "username_colors": ["#fb6169", "#faa357", "#b48bf2", "#85de85",
+                                       "#62d4e3", "#65bdf3", "#ff5694"],
+                   "default_username_color": "#b48bf2"})
 
     @register(outgoing=True, pattern="^.pch(?: |$)(.*)")
     async def quotecmd(message):  # noqa: C901
@@ -73,8 +70,9 @@ if 1 == 1:
         if isinstance(message.to_id, telethon.tl.types.PeerChannel):
             try:
                 user = await bot(telethon.tl.functions.channels.GetParticipantRequest(message.chat_id,
-                                                                                              reply.from_id))
-                if isinstance(user.participant, telethon.tl.types.ChannelParticipantCreator):
+                                                                                      reply.from_id))
+                if isinstance(user.participant,
+                              telethon.tl.types.ChannelParticipantCreator):
                     admintitle = user.participant.rank or strings["creator"]
                 elif isinstance(user.participant, telethon.tl.types.ChannelParticipantAdmin):
                     admintitle = user.participant.rank or strings["admin"]
@@ -84,8 +82,14 @@ if 1 == 1:
         elif isinstance(message.to_id, telethon.tl.types.PeerChat):
             chat = await bot(telethon.tl.functions.messages.GetFullChatRequest(reply.to_id))
             participants = chat.full_chat.participants.participants
-            participant = next(filter(lambda x: x.user_id == reply.from_id, participants), None)
-            if isinstance(participant, telethon.tl.types.ChatParticipantCreator):
+            participant = next(
+                filter(
+                    lambda x: x.user_id == reply.from_id,
+                    participants),
+                None)
+            if isinstance(
+                    participant,
+                    telethon.tl.types.ChatParticipantCreator):
                 admintitle = strings["creator"]
             elif isinstance(participant, telethon.tl.types.ChatParticipantAdmin):
                 admintitle = strings["admin"]
@@ -104,13 +108,15 @@ if 1 == 1:
             elif reply.fwd_from.from_name:
                 username = reply.fwd_from.from_name
             elif reply.forward.sender:
-                username = telethon.utils.get_display_name(reply.forward.sender)
+                username = telethon.utils.get_display_name(
+                    reply.forward.sender)
             elif reply.forward.chat:
                 username = telethon.utils.get_display_name(reply.forward.chat)
 
         pfp = await bot.download_profile_photo(profile_photo_url, bytes)
         if pfp is not None:
-            profile_photo_url = "data:image/png;base64, " + base64.b64encode(pfp).decode()
+            profile_photo_url = "data:image/png;base64, " + \
+                base64.b64encode(pfp).decode()
 
         if user_id is not None:
             username_color = config["username_colors"][user_id % 7]
@@ -146,9 +152,11 @@ if 1 == 1:
                 raise ValueError("Invalid response from server", resp)
         elif resp["status"] == 404:
             if resp["message"] == "ERROR_TEMPLATE_NOT_FOUND":
-                newreq = requests.post(config["api_url"] + "/api/v1/getalltemplates", data={
-                    "token": QUOTES_API_TOKEN
-                })
+                newreq = requests.post(
+                    config["api_url"] +
+                    "/api/v1/getalltemplates",
+                    data={
+                        "token": QUOTES_API_TOKEN})
                 newreq = newreq.json()
 
                 if newreq["status"] == "NOT_ENOUGH_PERMISSIONS":
@@ -215,8 +223,9 @@ def get_markdown(reply):
         markdown.append(md_item)
     return markdown
 
+
 CMD_HELP.update({
-        "stickerchat": 
+    "stickerchat":
         ".pch \
           \nUsage: Same as quotly, enhance ur text to sticker."
-    })
+})

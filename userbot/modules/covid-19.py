@@ -9,6 +9,7 @@ from covid import Covid
 from userbot import CMD_HELP
 from userbot.events import register
 
+
 @register(outgoing=True, pattern="^.covid(?: |$)(.*)")
 async def corona(event):
     covid = Covid()
@@ -16,20 +17,21 @@ async def corona(event):
     input_str = event.pattern_match.group(1)
     country = input_str.capitalize()
     country_data = get_country_data(country, data)
-    output_text = "" 
+    output_text = ""
     for name, value in country_data.items():
         output_text += "`{}`: `{}`\n".format(str(name), str(value))
     await event.edit("**#StayAtHome #DirumahAja\nInfo Virus Corona di {}**:\n\n{}".format(country.capitalize(), output_text))
+
 
 def get_country_data(country, world):
     for country_data in world:
         if country_data["country"] == country:
             return country_data
     return {"Status": "Belum Ada Informasi Data Dari Negara Ini"}
-    
-    
+
+
 CMD_HELP.update({
-        "covid": 
+    "covid":
         ".covid <country>\
           \nUsage: Get an information about data covid-19 in your country.\n"
-    })
+})
