@@ -19,13 +19,13 @@ from telethon import TelegramClient
 from telethon.sessions)
 
 # Bot Logs setup:
-CONSOLE_LOGGER_VERBOSE = sb(os.environ.get(
+CONSOLE_LOGGER_VERBOSE=sb(os.environ.get(
     "CONSOLE_LOGGER_VERBOSE") or "False")
 
 if CONSOLE_LOGGER_VERBOSE:
     basicConfig(
-        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-        level=DEBUG,
+        format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        level = DEBUG,
     )
 else:
     basicConfig(
