@@ -198,7 +198,7 @@ async def pipcheck(pip):
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     output = ("┏━━━━━━━━━━━━━━━━━━━━━━━\n"
-              f"┣[`Hi Master Bot Telah Aktif🙇‍♀🙇`\n"
+              f"┣[ `Hi Master Bot Telah Aktif🙇‍♀🙇`\n"
               f"┣━━━━━━━━━━━━━━━━━━━━━━━\n"
               f"┣[ 👤 `Name     : {DEFAULTUSER} `\n"
               f"┣[ 👁‍🗨 `Username : ilham_maulana1`\n"
