@@ -1,6 +1,6 @@
-<marquee bgcolor="blue" style="font-family:arial; font-size:20px; color:#ffffff;">OneChan UserBot</marquee>
+            OneChan UserBot
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/Ilham94/OneChan"> <img src="https://telegra.ph/file/cbb38d8fa7ff8ca789833.jpg" alt="Deploy to Heroku" /></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/Ilham94/OneChan"> <img src="https://telegra.ph/file/8438e16c058657f482238.jpg" alt="Deploy to Heroku" /></a></p>
 
 ## Generate String Session
 
