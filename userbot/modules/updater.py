@@ -172,7 +172,7 @@ async def upstream(event):
 
     if changelog == '' and force_update is False:
         await event.edit(
-            f'\n`ShinoaHiiragiBot`  ** Terupdate**  `Dengan`  **{UPSTREAM_REPO_BRANCH}**\n')
+            f'\n`OneChan-UserBot is`  **up-to-date**  ``  **{UPSTREAM_REPO_BRANCH}**\n')
         return repo.__del__()
 
     if conf is None and force_update is False:
