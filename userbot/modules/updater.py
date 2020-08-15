@@ -87,13 +87,13 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         except GitCommandError as error:
             await event.edit(f'{txt}\n`Here is the error log:\n{error}`')
             return repo.__del__()
-        await event.edit('`Berhasil Diperbaharui!\n'
+        await event.edit('`OneChan-UserBot Berhasil Diperbaharui!\n'
                          'Sedang Direstart, Silahkan Tunggu...`')
 
         if BOTLOG:
             await event.client.send_message(
                 BOTLOG_CHATID, "#UPDATE \n"
-                "ShinoaHiiragiBot Kamu Telah Diperbaharui")
+                " Kamu Telah Diperbaharui")
 
     else:
         await event.edit('`Please set up HEROKU_API_KEY variable.`')
@@ -112,7 +112,7 @@ async def update(event, repo, ups_rem, ac_br):
     if BOTLOG:
         await event.client.send_message(
             BOTLOG_CHATID, "#UPDATE \n"
-            "ShinoaHiiragiBot Telah Berhasil Diperbaharui")
+            "OneChan-UserBot Telah Berhasil Diperbaharui")
 
     # Spin a new instance of bot
     args = [sys.executable, "-m", "userbot"]
