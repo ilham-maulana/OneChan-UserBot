@@ -1,6 +1,6 @@
 {
-  "name": "OneChan UserBot",
-  "description": "[OneChan] A modular Telegram userbot running on Python 3.8",
+  "name": "OneChan-UserBot",
+  "description": "[OneChan-UserBot] A modular Telegram userbot running on Python 3.8",
   "keywords": [
     "telegram",
     "userbot",
@@ -8,7 +8,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/Ilham94/UserBot",
+  "repository": "https://github.com/Ilham94/OneChan-UserBot",
   "website": "https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02",
   "stack": "container",
   "env": {
