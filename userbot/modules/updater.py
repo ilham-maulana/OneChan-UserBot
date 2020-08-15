@@ -172,7 +172,7 @@ async def upstream(event):
 
     if changelog == '' and force_update is False:
         await event.edit(
-            f'\n`OneChan-UserBot is`  **up-to-date**  ``  **{UPSTREAM_REPO_BRANCH}**\n')
+            f'\n`OneChan-UserBot is`  **up-to-date**  **{UPSTREAM_REPO_BRANCH}**\n')
         return repo.__del__()
 
     if conf is None and force_update is False:
@@ -194,9 +194,9 @@ async def upstream(event):
 
     if force_update:
         await event.edit(
-            '`Menstabilkan Kode Userbot ShinoaHiiragiBot, Silahkan Tunggu...`')
+            '`Menstabilkan Kode Userbot OneChan-UserBot, Silahkan Tunggu...`')
     else:
-        await event.edit('`Updating ShinoaHiiragiBot, Silahkan Tunggu....`')
+        await event.edit('`Updating OneChan-UserBot, Silahkan Tunggu....`')
     if conf == "now":
         await update(event, repo, ups_rem, ac_br)
     elif conf == "deploy":
