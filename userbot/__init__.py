@@ -88,7 +88,7 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN") or None
 
 # Custom (forked) repo URL and BRANCH for updater.
 UPSTREAM_REPO_URL = (os.environ.get("UPSTREAM_REPO_URL")
-                     or "https://github.com/RizkyAkame/ShinoaHiiragi.git")
+                     or "https://github.com/Ilham94/OneChan-UserBot")
 UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH") or "sql-extended"
 
 # Console verbose logging
@@ -136,7 +136,7 @@ ALIVE_LOGO = os.environ.get("ALIVE_LOGO") or None
 COUNTRY = str(os.environ.get("COUNTRY") or "")
 TZ_NUMBER = int(os.environ.get("TZ_NUMBER") or 1)
 
-# Version of One4uBot
+# Version of OneChan-UserBot
 USERBOT_VERSION = os.environ.get("USERBOT_VERSION") or "3.5"
 
 # User Terminal alias
