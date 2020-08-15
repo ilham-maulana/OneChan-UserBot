@@ -1,6 +1,6 @@
 {
   "name": "Telegram ShinoaBot",
-  "description": "[ShinoaBot] A modular Telegram userbot running on Python 3.8+ with an sqlalchemy database.",
+  "description": "[OneChan-UserBot] A modular Telegram userbot running on Python 3.8+ with an sqlalchemy database.",
   "logo": "https://telegra.ph/file/ba033bb7582b700f751c4.jpg",
   "keywords": [
     "telegram",
@@ -9,7 +9,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/RizkyawanNFS/ShinoaBot",
+  "repository": "https://github.com/Ilham94/OneChan-UserBot",
   "website": "https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02",
   "success_url": "https://t.me/rizkynfs",
   "stack": "container",
