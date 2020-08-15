@@ -16,10 +16,12 @@
   "env": {
     "API_KEY": {
       "description": "Get this value from my.telegram.org.",
+      "value": "961780",
       "required": true
     },
     "API_HASH": {
       "description": "Get this value from my.telegram.org.",
+      "value": "bbbfa43f067e1e8e2fb41f334d32a6a7",
       "required": true
     },
     "STRING_SESSION": {
@@ -28,16 +30,16 @@
     },
     "HEROKU_MEMEZ": {
       "description": "This should be True if the userbot is running on a Heroku Dyno.",
-      "value": "True",
+      "value": "1BVtsOJABuxOQ7X6BWnRUwJKne-M1NhrqZWSFAorZEVI-foe8EwDgi2lndVVRXHzeWFkdGIwd72mViHM66grYnHwwPEQ0e55UKXxVUDpPHZEsVDulwRf8SCSWopT3-I1ZeqGhPeOAK0zVGgUXQ660zWC9y4XBSPTQPgfM-dPE52nwexFACzzu0joRkwAk6UsFGgaWT-XZTkiE8gt0i8aG6wLgfqG9fkrBVwzkDTvmPnDEAbY_JZJnyoIwy9w10qMGfyaDqBh3nif35E-MusklImIr6IczuHWFjc249mwfFtRlNsB0JF36iop0JBzEyFgFZMxWAOhpM4g2ed6tF5KKiL_bFKJovCs=",
       "required": true
     },
     "HEROKU_API_KEY": {
       "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
-      "value": ""
+      "value": "5830fccb-1354-45fb-a971-930757add05a"
     },
     "HEROKU_APP_NAME": {
       "description": "Add the Heroku app name here. It helps with userbot updates.",
-      "required": true
+      "required": false
     },
     "GITHUB_ACCESS_TOKEN": {
       "description": "Your GITHUB_ACCESS_TOKEN, get it from 'https://github.com/settings/tokens'",
@@ -94,7 +96,7 @@
     },
     "BOTLOG_CHATID": {
       "description": "ChatID of the Log group. Set it to '0' if BOTLOG = False and/or if LOGSPAMMER = False.",
-      "value": "0"
+      "value": "1001450059942"
     },
     "CONSOLE_LOGGER_VERBOSE": {
       "description": "If you need verbosity on the console logging",
@@ -170,7 +172,7 @@
     },
     "DEFAULT_BIO": {
       "description": "Default profile bio.",
-      "value": "[PM = Report Spam] I ❤ ️ ShinoaHiiragi",
+      "value": "[PM = Report Spam]",
       "required": false
     },
     "ALIVE_NAME": {
@@ -179,6 +181,7 @@
     },
     "ALIVE_LOGO": {
       "description": "Show Image/Logo in .alive message. Fill value of image your link image, use telegra.ph / i.ibb.co to get your own image",
+      "value": "https://telegra.ph/file/8438e16c058657f482238.jpg",
       "required": false
     },
     "G_DRIVE_CLIENT_SECRET": {
