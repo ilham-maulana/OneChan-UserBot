@@ -1,6 +1,6 @@
 {
-  "name": "Telegram ShinoaHiiragi",
-  "description": "[ShinoaHiiragi] Bot Telegram",
+  "name": "Telegram OneChan-UserBot",
+  "description": "[OneChan-UserBot] Bot Telegram",
   "logo": "https://telegra.ph/file/ba033bb7582b700f751c4.jpg",
   "keywords": [
     "telegram",
@@ -9,7 +9,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/RizkyAkame/ShinoaHiiragi",
+  "repository": "https://github.com/Ilham94/OneChan-UserBot",
   "website": "https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02",
   "success_url": "https://t.me/rizkynfs",
   "stack": "container",
