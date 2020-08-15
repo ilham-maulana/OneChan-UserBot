@@ -8,7 +8,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/Ilham94/OneChan",
+  "repository": "https://github.com/Ilham94/OneChan-UserBot",
   "website": "https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02",
   "stack": "container",
   "env": {
