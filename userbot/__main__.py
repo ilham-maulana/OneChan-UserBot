@@ -1,6 +1,6 @@
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
+# Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
 #
 """ Userbot start point """
@@ -26,10 +26,11 @@ except PhoneNumberInvalidError:
 for module_name in ALL_MODULES:
     imported_module = import_module("userbot.modules." + module_name)
 
-LOGS.info("Kamu Menggunakan AkameBot [13.1.1]")
+LOGS.info("You are running ShinoaHiiragi")
 
 LOGS.info(
-    "🛡️⚜️🔰🥇Selamat! Bot Kamu Berhasil Diaktifkan🥇🔰⚜️🛡️")
+    "Congratulations, your userbot is now running !! Test it by typing .alive / .on in any chat."
+    "If you need assistance, head to https://t.me/rizkynfs")
 
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
