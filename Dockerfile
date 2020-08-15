@@ -4,7 +4,7 @@ RUN mkdir /One4uBot && chmod 777 /One4uBot
 ENV PATH="/One4uBot/bin:$PATH"
 WORKDIR /One4uBot
 
-RUN git clone https://github.com/RizkyawanNFS/ShinoaBot -b sql-extended /One4uBot
+RUN git clone https://github.com/Ilham94/OneChan-UserBot -b sql-extended /One4uBot
 
 #
 # Copies session and config(if it exists)
