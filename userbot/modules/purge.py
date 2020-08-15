@@ -1,6 +1,6 @@
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
+# Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
 #
 """ Userbot module for purging unneeded messages(usually spam or ot). """
@@ -30,7 +30,7 @@ async def fastpurger(purg):
                 await purg.client.delete_messages(chat, msgs)
                 msgs = []
     else:
-        await purg.edit("Tentukan Pesan Mana Yang Mulai Dihapus")
+        await purg.edit("`I need a mesasge to start purging from.`")
         return
 
     if msgs:
@@ -42,7 +42,7 @@ async def fastpurger(purg):
     if BOTLOG:
         await purg.client.send_message(
             BOTLOG_CHATID,
-            "Purge Dari " + str(count) + " Pesan Telah Berhasil")
+            "Purge of " + str(count) + " messages done successfully.")
     await sleep(2)
     await done.delete()
 
@@ -63,12 +63,12 @@ async def purgeme(delme):
 
     smsg = await delme.client.send_message(
         delme.chat_id,
-        "Purge Selesai! Jumlah " + str(count) + " Pesan",
+        "`Purge complete!` Purged " + str(count) + " messages.",
     )
     if BOTLOG:
         await delme.client.send_message(
             BOTLOG_CHATID,
-            "Total " + str(count) + " Pesan Telah Berhasil Dihapus")
+            "Purge of " + str(count) + " messages done successfully.")
     await sleep(2)
     i = 1
     await smsg.delete()
@@ -84,11 +84,11 @@ async def delete_it(delme):
             await delme.delete()
             if BOTLOG:
                 await delme.client.send_message(
-                    BOTLOG_CHATID, "Hapus Pesan Berhasil")
+                    BOTLOG_CHATID, "Deletion of message was successful")
         except rpcbaseerrors.BadRequestError:
             if BOTLOG:
                 await delme.client.send_message(
-                    BOTLOG_CHATID, "Saya Tidak Bisa Menghapus Pesan Tersebut")
+                    BOTLOG_CHATID, "Well, I can't delete a message")
 
 
 @register(outgoing=True, pattern="^.edit")
@@ -107,7 +107,7 @@ async def editer(edit):
         i = i + 1
     if BOTLOG:
         await edit.client.send_message(BOTLOG_CHATID,
-                                       "Edit Pesan Berhasil Dilakukan")
+                                       "Edit query was executed successfully")
 
 
 @register(outgoing=True, pattern="^.sd")

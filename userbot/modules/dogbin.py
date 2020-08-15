@@ -1,14 +1,13 @@
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
+# Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
 #
 """ Userbot module containing commands for interacting with dogbin(https://del.dog)"""
 
 from requests import get, post, exceptions
-import asyncio
 import os
-from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, LOGS, TEMP_DOWNLOAD_DIRECTORY
+from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, TEMP_DOWNLOAD_DIRECTORY
 from userbot.events import register
 
 DOGBIN_URL = "https://del.dog/"
@@ -39,7 +38,7 @@ async def paste(pstl):
                 m_list = fd.readlines()
             message = ""
             for m in m_list:
-                message += m.decode("UTF-8") + "\r"
+                message += m.decode("UTF-8")
             os.remove(downloaded_file_name)
         else:
             message = message.message
@@ -55,12 +54,14 @@ async def paste(pstl):
 
         if response['isUrl']:
             reply_text = ("`Pasted successfully!`\n\n"
-                          f"`Shortened URL:` {dogbin_final_url}\n\n"
+                          f"[Shortened URL]({dogbin_final_url})\n\n"
                           "`Original(non-shortened) URLs`\n"
-                          f"`Dogbin URL`: {DOGBIN_URL}v/{key}\n")
+                          f"[Dogbin URL]({DOGBIN_URL}v/{key})\n"
+                          f"[View RAW]({DOGBIN_URL}raw/{key})")
         else:
             reply_text = ("`Pasted successfully!`\n\n"
-                          f"`Dogbin URL`: {dogbin_final_url}")
+                          f"[Dogbin URL]({dogbin_final_url})\n"
+                          f"[View RAW]({DOGBIN_URL}raw/{key})")
     else:
         reply_text = ("`Failed to reach Dogbin`")
 

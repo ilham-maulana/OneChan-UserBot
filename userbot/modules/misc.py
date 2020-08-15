@@ -1,6 +1,6 @@
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
+# Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
 #
 # You can find misc modules, which dont fit in anything xD
@@ -11,25 +11,27 @@ from time import sleep
 from os import execl
 import sys
 import io
+import sys
 from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot
 from userbot.events import register
 from userbot.utils import time_formatter
 
 
-@register(outgoing=True, pattern="^\.random")
+@register(outgoing=True, pattern="^.random")
 async def randomise(items):
     """ For .random command, get a random item from the list of items. """
     itemo = (items.text[8:]).split()
     if len(itemo) < 2:
-        return await items.edit(
+        await items.edit(
             "`2 or more items are required! Check .help random for more info.`"
         )
+        return
     index = randint(1, len(itemo) - 1)
     await items.edit("**Query: **\n`" + items.text[8:] + "`\n**Output: **\n`" +
                      itemo[index] + "`")
 
 
-@register(outgoing=True, pattern="^\.sleep ([0-9]+)$")
+@register(outgoing=True, pattern="^.sleep ([0-9]+)$")
 async def sleepybot(time):
     """ For .sleep command, let the userbot snooze for a few second. """
     counter = int(time.pattern_match.group(1))
@@ -44,17 +46,17 @@ async def sleepybot(time):
     await time.edit("`OK, I'm awake now.`")
 
 
-@register(outgoing=True, pattern="^\.shutdown$")
-async def killthebot(event):
+@register(outgoing=True, pattern="^.shutdown$")
+async def killdabot(event):
     """ For .shutdown command, shut the bot down."""
-    await event.edit("`Goodbye...`")
+    await event.edit("`Goodbye *Windows XP shutdown sound*....`")
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, "#SHUTDOWN \n"
                                         "Bot shut down")
     await bot.disconnect()
 
 
-@register(outgoing=True, pattern="^\.restart$")
+@register(outgoing=True, pattern="^.restart$")
 async def killdabot(event):
     await event.edit("`*i would be back in a moment*`")
     if BOTLOG:
@@ -67,20 +69,21 @@ async def killdabot(event):
     exit()
 
 
-@register(outgoing=True, pattern="^\.readme$")
+@register(outgoing=True, pattern="^.readme$")
 async def reedme(e):
     await e.edit(
         "Here's something for you to read:\n"
-        "\n[OneChan's README.md file](https://github.com/Ilham94/OneChan-UserBot/blob/master/README.md)"
-        "\n[Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
+        "\n[One4uBot's README.md file](https://github.com/MoveAngel/One4uBot/blob/sql-extended/README.md)"
+        "\n[Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-07-01-2)"
         "\n[Setup Guide - Google Drive](https://telegra.ph/How-To-Setup-Google-Drive-04-03)"
         "\n[Setup Guide - LastFM Module](https://telegra.ph/How-to-set-up-LastFM-module-for-Paperplane-userbot-11-02)"
-        "\n[Video Tutorial - 576p](https://mega.nz/#!ErwCESbJ!1ZvYAKdTEfb6y1FnqqiLhHH9vZg4UB2QZNYL9fbQ9vs)"
-        "\n[Video Tutorial - 1080p](https://mega.nz/#!x3JVhYwR!u7Uj0nvD8_CyyARrdKrFqlZEBFTnSVEiqts36HBMr-o)"
-        "\n[Special - Note](https://telegra.ph/Special-Note-11-02)")
+        "\n[Setup Guide - From MiHub with Pict](https://www.mihub.my.id/2020/05/jadiuserbot.html)"
+        "\n[Setup Guide - In Indonesian Language](https://telegra.ph/UserIndoBot-05-21-3)"
+        "\n[Instant Setup - Generate String Session](https://userbotsession.moveangel.repl.run)")
 
 
-@register(outgoing=True, pattern="^\.repeat (.*)")
+# Copyright (c) Gegham Zakaryan | 2019
+@register(outgoing=True, pattern="^.repeat (.*)")
 async def repeat(rep):
     cnt, txt = rep.pattern_match.group(1).split(' ', 1)
     replyCount = int(cnt)
@@ -94,13 +97,15 @@ async def repeat(rep):
     await rep.edit(replyText)
 
 
-@register(outgoing=True, pattern=r"^\.repo$")
+@register(outgoing=True, pattern="^.repo$")
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
-    await wannasee.edit("[Repo](https://github.com/Ilham94/OneChan-UserBot) GitHub's page.")
+    await wannasee.edit(
+        "[Klik Disini](https://t.me/rizkynfs) Tanyakan Creator Untuk Link Repo Yang Dibuat"
+    )
 
 
-@register(outgoing=True, pattern="^\.raw$")
+@register(outgoing=True, pattern="^.raw$")
 async def raw(event):
     the_real_message = None
     reply_to_id = None
@@ -125,28 +130,47 @@ async def raw(event):
 
 
 CMD_HELP.update({
-    "random":
-    ">`.random <item1> <item2> ... <itemN>`"
-    "\nUsage: Get a random item from the list of items.",
-    "sleep":
-    ">`.sleep <seconds>`"
-    "\nUsage: Let yours snooze for a few seconds.",
+    'random':
+    '.random <item1> <item2> ... <itemN>\
+\nUsage: Get a random item from the list of items.'
+})
+
+CMD_HELP.update({
+    'sleep':
+    '.sleep <seconds>\
+\nUsage: Userbots get tired too. Let yours snooze for a few seconds.'
+})
+
+CMD_HELP.update({
     "shutdown":
-    ">`.shutdown`"
-    "\nUsage: Shutdown bot",
-    "repo":
-    ">`.repo`"
-    "\nUsage: Github Repo of this bot",
+    ".shutdown\
+\nUsage: Sometimes you need to shut down your bot. Sometimes you just hope to\
+hear Windows XP shutdown sound... but you don't."
+})
+
+CMD_HELP.update({
+    'repo':
+    '.repo\
+\nUsage: If you are curious what makes the userbot work, this is what you need.'
+})
+
+CMD_HELP.update({
     "readme":
-    ">`.readme`"
-    "\nUsage: Provide links to setup the userbot and it's modules.",
+    ".readme\
+\nUsage: Provide links to setup the userbot and it's modules."
+})
+
+CMD_HELP.update({
     "repeat":
-    ">`.repeat <no> <text>`"
-    "\nUsage: Repeats the text for a number of times. Don't confuse this with spam tho.",
-    "restart":
-    ">`.restart`"
-    "\nUsage: Restarts the bot !!",
+    ".repeat <no.> <text>\
+\nUsage: Repeats the text for a number of times. Don't confuse this with spam tho."
+})
+
+CMD_HELP.update({"restart": ".restart\
+\nUsage: Restarts the bot !!"})
+
+CMD_HELP.update({
     "raw":
-    ">`.raw`"
-    "\nUsage: Get detailed JSON-like formatted data about replied message."
+    ".raw\
+\nUsage: Get detailed JSON-like formatted data about replied message."
 })

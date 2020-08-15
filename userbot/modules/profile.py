@@ -1,6 +1,6 @@
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
+# Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
 #
 """ Userbot module for changing your Telegram profile details. """
@@ -27,16 +27,16 @@ from userbot import bot, CMD_HELP
 from userbot.events import register
 
 # ====================== CONSTANT ===============================
-INVALID_MEDIA = "```Media Ini Tidak Cocok.```"
-PP_CHANGED = "```Foto Profil Berhasil Diganti.```"
-PP_TOO_SMOL = "```Gambarnya Terlalu Burik, Ganti Yang HD Dong.```"
-PP_ERROR = "```Gagal Ketika Memproses Foto.```"
+INVALID_MEDIA = "```The extension of the media entity is invalid.```"
+PP_CHANGED = "```Profile picture changed successfully.```"
+PP_TOO_SMOL = "```This image is too small, use a bigger image.```"
+PP_ERROR = "```Failure occured while processing image.```"
 
-BIO_SUCCESS = "```Sukses Mengedit Bio.```"
+BIO_SUCCESS = "```Successfully edited Bio.```"
 
-NAME_OK = "```Nama Kamu Berhasil Diganti.```"
-USERNAME_SUCCESS = "```Username Kamu Berhasil Diganti.```"
-USERNAME_TAKEN = "```Username Ini Telah Digunakan.```"
+NAME_OK = "```Your name was succesfully changed.```"
+USERNAME_SUCCESS = "```Your username was succesfully changed.```"
+USERNAME_TAKEN = "```This username is already taken.```"
 # ===============================================================
 
 
@@ -70,6 +70,7 @@ async def update_name(name):
 @register(outgoing=True, pattern="^.setpfp$")
 async def set_profilepic(propic):
     """ For .profilepic command, change your profile picture in Telegram. """
+    await propic.edit("`Processing...`")
     replymsg = await propic.get_reply_message()
     photo = None
     if replymsg.media:
@@ -98,6 +99,7 @@ async def set_profilepic(propic):
 @register(outgoing=True, pattern="^.setbio (.*)")
 async def set_biograph(setbio):
     """ For .setbio command, set a new bio for your profile in Telegram. """
+    await setbio.edit("`Processing...`")
     newbio = setbio.pattern_match.group(1)
     await setbio.client(UpdateProfileRequest(about=newbio))
     await setbio.edit(BIO_SUCCESS)
@@ -106,6 +108,7 @@ async def set_biograph(setbio):
 @register(outgoing=True, pattern="^.username (.*)")
 async def update_username(username):
     """ For .username command, set a new username in Telegram. """
+    await username.edit("`Processing...`")
     newusername = username.pattern_match.group(1)
     try:
         await username.client(UpdateUsernameRequest(newusername))
@@ -123,7 +126,7 @@ async def count(event):
     bc = 0
     b = 0
     result = ""
-    await event.edit("`Sedang Diproses..`")
+    await event.edit("`Processing...`")
     dialogs = await bot.get_dialogs(limit=None, ignore_migrated=True)
     for d in dialogs:
         currrent_entity = d.entity
@@ -154,6 +157,7 @@ async def count(event):
 @register(outgoing=True, pattern=r"^.delpfp")
 async def remove_profilepic(delpfp):
     """ For .delpfp command, delete your current profile picture in Telegram. """
+    await delpfp.edit("`Processing...`")
     group = delpfp.text[8:]
     if group == 'all':
         lim = 0
@@ -175,7 +179,7 @@ async def remove_profilepic(delpfp):
                        file_reference=sep.file_reference))
     await delpfp.client(DeletePhotosRequest(id=input_photos))
     await delpfp.edit(
-        f"`Telah Berhasil Dihapus {len(input_photos)} Foto Profil.`")
+        f"`Successfully deleted {len(input_photos)} profile picture(s).`")
 
 
 CMD_HELP.update({

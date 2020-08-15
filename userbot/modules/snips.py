@@ -1,7 +1,8 @@
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
+# Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
+#
 """ Userbot module containing commands for keeping global notes. """
 
 from userbot.events import register
@@ -36,7 +37,7 @@ async def on_snip(event):
                                         reply_to=message_id_to_reply)
 
 
-@register(outgoing=True, pattern="^.snip (\w*)")
+@register(outgoing=True, pattern=r"^.snip (\w*)")
 async def on_snip_save(event):
     """ For .snip command, saves snips for future use. """
     try:
@@ -97,7 +98,7 @@ async def on_snip_list(event):
     await event.edit(message)
 
 
-@register(outgoing=True, pattern="^.remsnip (\w*)")
+@register(outgoing=True, pattern=r"^.remsnip (\w*)")
 async def on_snip_delete(event):
     """ For .remsnip command, deletes a snip. """
     try:

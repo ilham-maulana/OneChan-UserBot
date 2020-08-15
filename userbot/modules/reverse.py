@@ -2,7 +2,7 @@
 #
 # Thanks to @kandnub, for this awesome module !!
 #
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
+# Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
 #
 """ Userbot module for reverse searching stickers and images on Google """
@@ -10,11 +10,9 @@
 import io
 import os
 import urllib
-from urllib.request import urlopen
 import requests
 from bs4 import BeautifulSoup
 import re
-from telethon.tl.types import MessageMediaPhoto
 from PIL import Image
 
 from userbot import bot, CMD_HELP

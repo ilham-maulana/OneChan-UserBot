@@ -1,6 +1,6 @@
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
+# Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
 #
 """ Userbot module containing commands related to the \
@@ -17,7 +17,7 @@ from userbot.events import register
 @register(outgoing=True, pattern="^.speed$")
 async def speedtst(spd):
     """ For .speed command, use SpeedTest to check server speeds. """
-    await spd.edit("Running speed test . . .")
+    await spd.edit("`Running speed test . . .`")
     test = Speedtest()
 
     test.get_best_server()
@@ -26,7 +26,7 @@ async def speedtst(spd):
     test.results.share()
     result = test.results.dict()
 
-    await spd.edit(""
+    await spd.edit("`"
                    "Started at "
                    f"{result['timestamp']} \n\n"
                    "Download "
@@ -37,7 +37,7 @@ async def speedtst(spd):
                    f"{result['ping']} \n"
                    "ISP "
                    f"{result['client']['isp']}"
-                   "")
+                   "`")
 
 
 def speed_convert(size):
@@ -57,19 +57,19 @@ def speed_convert(size):
 async def neardc(event):
     """ For .dc command, get the nearest datacenter information. """
     result = await event.client(functions.help.GetNearestDcRequest())
-    await event.edit(f"Country : {result.country}\n"
-                     f"Nearest Datacenter : {result.nearest_dc}\n"
-                     f"This Datacenter : {result.this_dc}")
+    await event.edit(f"Country : `{result.country}`\n"
+                     f"Nearest Datacenter : `{result.nearest_dc}`\n"
+                     f"This Datacenter : `{result.this_dc}`")
 
 
 @register(outgoing=True, pattern="^.ping$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     start = datetime.now()
-    await pong.edit("TingTong!")
+    await pong.edit("`Pong!`")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit("TingTong!\n%sms" % (duration))
+    await pong.edit("`Pong!\n%sms`" % (duration))
 
 
 CMD_HELP.update(

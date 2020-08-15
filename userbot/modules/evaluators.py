@@ -1,15 +1,14 @@
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
+# Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
 #
 """ Userbot module for executing code and terminal commands from Telegram. """
 
 import asyncio
-from getpass import getuser
 from os import remove
 from sys import executable
-from userbot import CMD_HELP, BOTLOG, BOTLOG_CHATID
+from userbot import CMD_HELP, BOTLOG, BOTLOG_CHATID, USER_TERM_ALIAS
 from userbot.events import register
 
 
@@ -135,7 +134,7 @@ execute. Use .help exec for an example.```")
 @register(outgoing=True, pattern="^.term(?: |$)(.*)")
 async def terminal_runner(term):
     """ For .term command, runs bash commands and scripts on your server. """
-    curruser = getuser()
+    curruser = USER_TERM_ALIAS
     command = term.pattern_match.group(1)
     try:
         from os import geteuid
@@ -177,7 +176,7 @@ async def terminal_runner(term):
         remove("output.txt")
         return
 
-    if uid is 0:
+    if uid == 0:
         await term.edit("`" f"{curruser}:~# {command}" f"\n{result}" "`")
     else:
         await term.edit("`" f"{curruser}:~$ {command}" f"\n{result}" "`")

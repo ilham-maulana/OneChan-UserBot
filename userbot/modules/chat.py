@@ -1,7 +1,8 @@
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
+# Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
+#
 """ Userbot module containing userid, chatid and log commands"""
 
 from asyncio import sleep
@@ -75,7 +76,7 @@ async def log(log_text):
 @register(outgoing=True, pattern="^.kickme$")
 async def kickme(leave):
     """ Basically it's .kickme command """
-    await leave.edit("Dah Lah Males. Saya Keluar Dulu")
+    await leave.edit("Nope, no, no, I go away")
     await leave.client.kick_participant(leave.chat_id, 'me')
 
 

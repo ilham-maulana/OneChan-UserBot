@@ -1,10 +1,11 @@
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
+# Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
+#
 
 import asyncio
-from asyncio import wait, sleep
+from asyncio import sleep
 
 from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP
 from userbot.events import register
@@ -20,7 +21,7 @@ async def tmeme(e):
     if BOTLOG:
         await e.client.send_message(
             BOTLOG_CHATID, "#CSPAM\n"
-            "TSpam Telah Berhasil Dieksekusi")
+            "TSpam was executed successfully")
 
 
 @register(outgoing=True, pattern="^.wspam (.*)")
@@ -33,7 +34,7 @@ async def tmeme(e):
     if BOTLOG:
         await e.client.send_message(
             BOTLOG_CHATID, "#WSPAM\n"
-            "WSpam Telah Berhasil Dieksekusi")
+            "WSpam was executed successfully")
 
 
 @register(outgoing=True, pattern="^.spam (.*)")
@@ -44,7 +45,7 @@ async def spammer(e):
     await asyncio.wait([e.respond(spam_message) for i in range(counter)])
     if BOTLOG:
         await e.client.send_message(BOTLOG_CHATID, "#SPAM\n"
-                                    "Spam Telah Berhasil Dieksekusi")
+                                    "Spam was executed successfully")
 
 
 @register(outgoing=True, pattern="^.picspam")
@@ -59,7 +60,7 @@ async def tiny_pic_spam(e):
     if BOTLOG:
         await e.client.send_message(
             BOTLOG_CHATID, "#PICSPAM\n"
-            "PicSpam Telah Berhasil Dieksekusi")
+            "PicSpam was executed successfully")
 
 
 @register(outgoing=True, pattern="^.delayspam (.*)")
@@ -74,7 +75,7 @@ async def spammer(e):
     if BOTLOG:
         await e.client.send_message(
             BOTLOG_CHATID, "#DelaySPAM\n"
-            "DelaySpam Telah Berhasil Dieksekusi")
+            "DelaySpam was executed successfully")
 
 
 CMD_HELP.update({

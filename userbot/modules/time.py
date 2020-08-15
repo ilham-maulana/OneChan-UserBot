@@ -1,6 +1,6 @@
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
+# Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
 #
 """ Userbot module for getting the date
@@ -51,7 +51,7 @@ async def time_func(tdata):
     con = tdata.pattern_match.group(1).title()
     tz_num = tdata.pattern_match.group(2)
 
-    t_form = "%H:%M:%S"
+    t_form = "%H:%M"
     c_name = None
 
     if len(con) > 4:
@@ -65,11 +65,11 @@ async def time_func(tdata):
         tz_num = TZ_NUMBER
         timezones = await get_tz(COUNTRY)
     else:
-        await tdata.edit(f"Sekarang Jam  **{dt.now().strftime(t_form)}**  ")
+        await tdata.edit(f"`It's`  **{dt.now().strftime(t_form)}**  `here.`")
         return
 
     if not timezones:
-        await tdata.edit("Negara Tidak Valid")
+        await tdata.edit("`Invaild country.`")
         return
 
     if len(timezones) == 1:
@@ -79,14 +79,14 @@ async def time_func(tdata):
             tz_num = int(tz_num)
             time_zone = timezones[tz_num - 1]
         else:
-            return_str = f"{c_name} Mempunyai Beberapa Zona Waktu:\n\n"
+            return_str = f"`{c_name} has multiple timezones:`\n\n"
 
             for i, item in enumerate(timezones):
-                return_str += f"{i+1}. {item}\n"
+                return_str += f"`{i+1}. {item}`\n"
 
-            return_str += "\nPilih Dengan Mengetik Angka "
-            return_str += "Di Perintah.\n"
-            return_str += f"Contoh: .time {c_name} 2"
+            return_str += "\n`Choose one by typing the number "
+            return_str += "in the command.`\n"
+            return_str += f"`Example: .time {c_name} 2`"
 
             await tdata.edit(return_str)
             return
@@ -95,12 +95,12 @@ async def time_func(tdata):
 
     if c_name != COUNTRY:
         await tdata.edit(
-            f"Sekarang  Jam **{dtnow}**  Di {c_name}({time_zone} timezone)")
+            f"`It's`  **{dtnow}**  `in {c_name}({time_zone} timezone).`")
         return
 
     elif COUNTRY:
-        await tdata.edit(f"Sekarang Jam **{dtnow}**  , Di {COUNTRY}"
-                         f"({time_zone} timezone).")
+        await tdata.edit(f"`It's`  **{dtnow}**  `here, in {COUNTRY}"
+                         f"({time_zone} timezone).`")
         return
 
 
@@ -128,11 +128,11 @@ async def date_func(dat):
         tz_num = TZ_NUMBER
         timezones = await get_tz(COUNTRY)
     else:
-        await dat.edit(f"Sekarang  Tanggal **{dt.now().strftime(d_form)}**  ")
+        await dat.edit(f"`It's`  **{dt.now().strftime(d_form)}**  `here.`")
         return
 
     if not timezones:
-        await dat.edit("Negara Tidak Valid")
+        await dat.edit("`Invaild country.`")
         return
 
     if len(timezones) == 1:
@@ -142,14 +142,14 @@ async def date_func(dat):
             tz_num = int(tz_num)
             time_zone = timezones[tz_num - 1]
         else:
-            return_str = f"{c_name} Mempunyai Beberapa Zona Waktu:\n"
+            return_str = f"`{c_name} has multiple timezones:`\n"
 
             for i, item in enumerate(timezones):
-                return_str += f"{i+1}. {item}\n"
+                return_str += f"`{i+1}. {item}`\n"
 
-            return_str += "\nPilih Dengan Angka "
-            return_str += "Di Perintah.\n"
-            return_str += f"Contoh: .date {c_name} 2"
+            return_str += "\n`Choose one by typing the number "
+            return_str += "in the command.`\n"
+            return_str += f"Example: .date {c_name} 2"
 
             await dat.edit(return_str)
             return
@@ -158,12 +158,12 @@ async def date_func(dat):
 
     if c_name != COUNTRY:
         await dat.edit(
-            f"Sekarang Tanggal **{dtnow}**  Di {c_name}({time_zone} timezone)")
+            f"`It's`  **{dtnow}**  `in {c_name}({time_zone} timezone).`")
         return
 
     elif COUNTRY:
-        await dat.edit(f"Sekarang Tanggal **{dtnow}**  , in {COUNTRY}"
-                       f"({time_zone} timezone).")
+        await dat.edit(f"`It's`  **{dtnow}**  `here, in {COUNTRY}"
+                       f"({time_zone} timezone).`")
         return
 
 

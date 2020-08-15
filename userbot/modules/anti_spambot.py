@@ -1,9 +1,9 @@
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
+# Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
 #
-''' A module for helping ban group join spammers. '''
+"""A module for helping ban group join spammers."""
 
 from asyncio import sleep
 from requests import get
@@ -15,10 +15,9 @@ from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, ANTI_SPAMBOT, ANTI_SPAMBOT_
 
 
 @bot.on(ChatAction)
-async def ANTI_SPAMBOT(welcm):
+async def ANTI_SPAMBOTS(welcm):
+    """Ban a recently joined user if it matches the spammer checking algorithm."""
     try:
-        ''' Ban a recently joined user if it
-           matches the spammer checking algorithm. '''
         if not ANTI_SPAMBOT:
             return
         if welcm.user_joined or welcm.user_added:
@@ -83,18 +82,17 @@ async def ANTI_SPAMBOT(welcm):
                     ##############################################
 
                     try:
-                        cas_url = f"https://combot.org/api/cas/check?user_id={check_user.id}"
+                        # https://t.me/combotnews/283
+                        cas_url = f"https://api.cas.chat/check?user_id={check_user.id}"
                         r = get(cas_url, timeout=3)
                         data = r.json()
                     except BaseException:
                         print(
-                            "CAS check failed, falling back to legacy anti_spambot behaviour."
-                        )
+                            "CAS check failed, falling back to legacy anti_spambot behaviour.")
                         data = None
-                        pass
 
                     if data and data['ok']:
-                        reason = f"[Banned by Combot Anti Spam](https://combot.org/cas/query?u={check_user.id})"
+                        reason = f"[Banned by Combot Anti Spam](https://cas.chat/query?u={check_user.id})"
                         spambot = True
                     elif "t.cn/" in message.text:
                         reason = "Match on `t.cn` URLs"
@@ -115,7 +113,7 @@ async def ANTI_SPAMBOT(welcm):
                         if check_user.first_name in ("Bitmex", "Promotion",
                                                      "Information", "Dex",
                                                      "Announcements", "Info"):
-                            if user.last_name == "Bot":
+                            if users.last_name == "Bot":
                                 reason = "Known spambot"
                                 spambot = True
 
@@ -168,7 +166,7 @@ async def ANTI_SPAMBOT(welcm):
                     if kicked or reported:
                         await welcm.client.send_message(
                             BOTLOG_CHATID, "#ANTI_SPAMBOT REPORT\n"
-                            f"USER: [{user.first_name}](tg://user?id={check_user.id})\n"
+                            f"USER: [{check_user.first_name}](tg://user?id={check_user.id})\n"
                             f"USER ID: `{check_user.id}`\n"
                             f"CHAT: {welcm.chat.title}\n"
                             f"CHAT ID: `{welcm.chat_id}`\n"
