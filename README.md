@@ -20,4 +20,4 @@ Thanks for all :
 * [AdekMaulana](https://github.com/adekmaulana) - ProjectBish
 * [GengKapak](https://github.com/GengKapak/DCLXVI/graphs/contributors) -DCLXVI
 * [aone-id](https://github.com/aone-id/aone-kangbot) -aone-kangbot
-* [moveAnggel](https://github.com/MoveAngel)
+* [moveAngel](https://github.com/MoveAngel) - MoveAngel
