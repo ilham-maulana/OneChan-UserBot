@@ -1,13 +1,13 @@
 import asyncio
 
 
-@borg.on(admin_cmd(pattern="loveu", outgoing=True))
+@register(outgoing=True, pattern="^\.anim$")
 async def _(event):
     if event.fwd_from:
         return
     animation_interval = 0.5
     animation_ttl = range(0, 70)
-    await event.edit("loveu")
+    await event.edit("anim")
     animation_chars = [
         "😀",
         "👩‍🎨",
