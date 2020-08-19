@@ -200,7 +200,7 @@ async def amireallyalive(alive):
     output = ("┏━━━━━━━━━━━━━━━━━━━━━━━\n"
               f"┣[ `Hi Master Bot Telah Aktif🙇‍♀🙇`\n"
               f"┣━━━━━━━━━━━━━━━━━━━━━━━\n"
-              f"┣[ 👤 `Name     : {DEFAULTUSER}(tg://user?id={hmm})`\n"
+              f"┣[ 👤 `Name     : {DEFAULTUSER}`\n"
               f"┣[ 👁‍🗨 `Username : ilham_maulana1`\n"
               f"┣━━━━━━━━━━━━━━━━━━━━━━━\n"
               f"┣[ 🐍 `Python   : {python_version()} `\n"
