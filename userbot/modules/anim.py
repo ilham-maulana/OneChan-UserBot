@@ -2,13 +2,13 @@ import asyncio
 from userbot.events import register
 
 
-@register(outgoing=True, pattern=r"^\.anim$")
+@register(outgoing=True, pattern=r"^\.love$")
 async def _(event):
     if event.fwd_from:
         return
     animation_interval = 0.5
     animation_ttl = range(0, 70)
-    await event.edit("anim")
+    await event.edit("love")
     animation_chars = [
         "😀",
         "👩‍🎨",
