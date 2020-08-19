@@ -1,7 +1,7 @@
 import asyncio
 
 
-@register(outgoing=True, pattern="^\.anim$")
+@register(outgoing=True, pattern=r"^\.anim$")
 async def _(event):
     if event.fwd_from:
         return
