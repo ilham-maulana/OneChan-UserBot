@@ -13,7 +13,6 @@ from datetime import datetime
 from os import remove
 from platform import python_version, uname
 from shutil import which
-from telethon.utils import get_input_location
 
 import psutil
 from telethon import __version__, version
