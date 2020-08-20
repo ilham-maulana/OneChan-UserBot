@@ -9,4 +9,3 @@ async def typewriter(typew):
     await typew.edit("Biasakanlah Mengucapkan Salam")
     sleep(1)
     await typew.edit("Assalamualaikum")
-# Create by myself @AkameNFS
