@@ -201,7 +201,6 @@ async def amireallyalive(alive):
               f"┣[ `Hi Master Bot Telah Aktif🙇‍♀🙇`\n"
               f"┣━━━━━━━━━━━━━━━━━━━━━━━\n"
               f"┣[ 👤 `Name     : {DEFAULTUSER}`\n"
-              f"┣[ 👁‍🗨 `Username : ilham_maulana1`\n"
               f"┣━━━━━━━━━━━━━━━━━━━━━━━\n"
               f"┣[ 🐍 `Python   : {python_version()} `\n"
               f"┣[ ⚙️ `Telethon : {version.__version__} `\n"
