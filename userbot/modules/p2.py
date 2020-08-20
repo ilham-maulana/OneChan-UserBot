@@ -8,4 +8,4 @@ async def typewriter(typew):
     sleep(1)
     await typew.edit("Nah Gitu ")
     sleep(1)
-    await typew.edit(Waalaikumsalam")
+    await typew.edit("Waalaikumsalam")
