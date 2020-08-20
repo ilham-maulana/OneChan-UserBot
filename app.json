@@ -11,37 +11,37 @@
   ],
   "repository": "https://github.com/Ilham94/OneChan-UserBot",
   "website": "https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02",
-  "success_url": "https://t.me/rizkynfs",
+  "success_url": "https://t.me/ilham_maulana1",
   "stack": "container",
   "env": {
     "API_KEY": {
       "description": "Get this value from my.telegram.org.",
-      "value": "961780",
+      "value": "",
       "required": true
     },
     "API_HASH": {
       "description": "Get this value from my.telegram.org.",
-      "value": "bbbfa43f067e1e8e2fb41f334d32a6a7",
+      "value": "",
       "required": true
     },
     "STRING_SESSION": {
       "description": "Get this value by running [python3 string_session.py] in Termux or local system.",
-      "value": "1BVtsOJABuxOQ7X6BWnRUwJKne-M1NhrqZWSFAorZEVI-foe8EwDgi2lndVVRXHzeWFkdGIwd72mViHM66grYnHwwPEQ0e55UKXxVUDpPHZEsVDulwRf8SCSWopT3-I1ZeqGhPeOAK0zVGgUXQ660zWC9y4XBSPTQPgfM-dPE52nwexFACzzu0joRkwAk6UsFGgaWT-XZTkiE8gt0i8aG6wLgfqG9fkrBVwzkDTvmPnDEAbY_JZJnyoIwy9w10qMGfyaDqBh3nif35E-MusklImIr6IczuHWFjc249mwfFtRlNsB0JF36iop0JBzEyFgFZMxWAOhpM4g2ed6tF5KKiL_bFKJovCs=",
+      "value": "",
       "required": true
     },
     "HEROKU_MEMEZ": {
       "description": "This should be True if the userbot is running on a Heroku Dyno.",
       "value": "True",
-      "required": true
+      "required": false
     },
     "HEROKU_API_KEY": {
       "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
-      "value": "5830fccb-1354-45fb-a971-930757add05a",
+      "value": "",
       "required": true
     },
     "HEROKU_APP_NAME": {
       "description": "Add the Heroku app name here. It helps with userbot updates.",
-      "required": false
+      "required": true
     },
     "GITHUB_ACCESS_TOKEN": {
       "description": "Your GITHUB_ACCESS_TOKEN, get it from 'https://github.com/settings/tokens'",
@@ -98,7 +98,7 @@
     },
     "BOTLOG_CHATID": {
       "description": "ChatID of the Log group. Set it to '0' if BOTLOG = False and/or if LOGSPAMMER = False.",
-      "value": "1001450059942"
+      "value": ""
     },
     "CONSOLE_LOGGER_VERBOSE": {
       "description": "If you need verbosity on the console logging",
@@ -106,7 +106,7 @@
     },
     "PM_AUTO_BAN": {
       "description": "PM Auto-Ban Feature Switch. Also known as the 'bleep blop, this is a bot...' module.",
-      "value": "False"
+      "value": "false"
     },
     "OCR_SPACE_API_KEY": {
       "description": "OCR API Key for .ocr command. Get from https://ocr.space/ocrapi",
