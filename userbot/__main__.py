@@ -15,20 +15,19 @@ from var import Var
 from userbot.utils import load_module
 from pathlib import Path
 import telethon.utils
-import userbot._core
 import glob
 
 
 async def add_bot(bot_token):
     await bot.start(bot_token)
-    bot.me = await bot.get_me() 
+    bot.me = await bot.get_me()
     bot.uid = telethon.utils.get_peer_id(bot.me)
 
-  
+
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
-    bot.tgbot = None 
+    bot.tgbot = None
     if Var.TG_BOT_USER_NAME_BF_HER is not None:
         LOGS.info("Initiating Inline Bot")
         # ForTheGreatrerGood of beautification
@@ -43,7 +42,7 @@ else:
         LOGS.info("Startup Completed")
     else:
         bot.start()
-    
+
 path = 'userbot/plugins/*.py'
 files = glob.glob(path)
 for name in files:
