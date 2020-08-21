@@ -201,10 +201,10 @@ async def amireallyalive(alive):
         "**▬▬▬▬▬ ❴✪❵ SYSTEM ❴✪❵ ▬▬▬▬▬**\n\n"
         f"**> Telethon:** {version.__version__}\n"
         f"**> Python:** {versions.__python_version__}\n"
-        f"**> Firmware:** 1.39.0\n"
-        f"**> Licenza:** 1.22.0\n"
-        f"**> Copyright:**  i̞̟̫̺ͭ̒ͭͣlͬ̍ͤ͆ ͕͖͉̭̰ͨh͚̖̜̍̃͐a̘̫͈̭͌͛͌̇̇̍m̘͈̺̪͓ͩ͂̾ͪ̀̋ Ma̘̫͈̭͌͛͌̇̇̍u̟͎̲͕̼ͮͫͭ̋ͭ͛ͣ̈lͬ̍ͤa̘̫͈̭͌͛͌̇̇̍n̋̋̔ͧa͌͛\n"
-        f"**> Creator: [ i̞̟̫̺ͭ̒ͭͣlͬ̍ͤ͆h͚̖̜̍̃͐a̘̫͈̭͌͛͌̇̇̍m̘͈̺̪͓ͩ͂̾ͪ̀̋ Ma̘̫͈̭͌͛͌̇̇̍u̟͎̲͕̼ͮͫͭ̋ͭ͛ͣ̈lͬ̍ͤa̘̫͈̭͌͛͌̇̇̍n̋̋̔ͧa͌͛](https://t.me/ilham_Maulana1\n**"
+        f"**> Firmware:** 1.20.0\n"
+        f"**> Licenza:** 1.32.0}\n"
+        f"**> Copyright:**  i̞̟̫̺ͭ̒ͭͣlͬ̍ͤ͆h͚̖̜̍̃͐a̘̫͈̭͌͛͌̇̇̍m̘͈̺̪͓ͩ͂̾ͪ̀̋ Ma̘̫͈̭͌͛͌̇̇̍u̟͎̲͕̼ͮͫͭ̋ͭ͛ͣ̈lͬ̍ͤa̘̫͈̭͌͛͌̇̇̍n̋̋̔ͧa͌͛\n"
+        f"**> Creator: [ilham](https://t.me/ilham_Maulana1\n**"
         f"**> 👤 USER**: {DEFAULTUSER}\n\n"
         "▬▬▬▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬▬▬▬")
     if ALIVE_LOGO:
