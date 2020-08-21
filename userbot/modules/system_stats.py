@@ -198,14 +198,14 @@ async def pipcheck(pip):
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     output = ("`▬▬▬▬▬ ❴✪❵ SYSTEM ❴✪❵ ▬▬▬▬▬\n\n"
-        f"**> Telethon:** {version.__version__}\n"
-        f"**> Python:** {versions.__python_version__}\n"
-        f"**> Firmware:** 1.20.0\n"
-        f"**> Licenza:** 1.32.0}\n"
-        f"**> Copyright:**  i̞̟̫̺ͭ̒ͭͣlͬ̍ͤ͆h͚̖̜̍̃͐a̘̫͈̭͌͛͌̇̇̍m̘͈̺̪͓ͩ͂̾ͪ̀̋ Ma̘̫͈̭͌͛͌̇̇̍u̟͎̲͕̼ͮͫͭ̋ͭ͛ͣ̈lͬ̍ͤa̘̫͈̭͌͛͌̇̇̍n̋̋̔ͧa͌͛\n"
-        f"**> Creator: [ilham](https://t.me/ilham_Maulana1\n**"
-        f"**> 👤 USER**: {DEFAULTUSER}\n\n"
-        "▬▬▬▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬▬▬▬`")
+              f"**> Telethon:** {version.__version__}\n"
+              f"**> Python:** {versions.__python_version__}\n"
+              f"**> Firmware:** 1.20.0\n"
+              f"**> Licenza:** 1.32.0}\n"
+              f"**> Copyright:**  i̞̟̫̺ͭ̒ͭͣlͬ̍ͤ͆h͚̖̜̍̃͐a̘̫͈̭͌͛͌̇̇̍m̘͈̺̪͓ͩ͂̾ͪ̀̋ Ma̘̫͈̭͌͛͌̇̇̍u̟͎̲͕̼ͮͫͭ̋ͭ͛ͣ̈lͬ̍ͤa̘̫͈̭͌͛͌̇̇̍n̋̋̔ͧa͌͛\n"
+              f"**> Creator: [ilham](https://t.me/ilham_Maulana1\n**"
+              f"**> 👤 USER**: {DEFAULTUSER}\n\n"
+              "▬▬▬▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬▬▬▬`")
     if ALIVE_LOGO:
         logo = ALIVE_LOGO
         await bot.send_file(alive.chat_id, logo, caption=output)
