@@ -1,8 +1,24 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
+# Copyright © 2020 di ilham94 Github, <https://github.com/ilham94>.
+
 #
-# Licensed under the Raphielscape Public License, Version 1.d (the "License");
-# you may not use this file except in compliance with the License.
+
+# Questo file fa parte del progetto <https://github.com/Ilham94/OneChan>,
+
+# e viene rilasciato in base alla "Licenza GNU Affero General Public v3.0".
+
+# Si prega di consultare
+# <https://github.com/Ilham94/OneChan/blob/master/LICENSE>
+
 #
+
+# Tutti i diritti riservati.
+
+#
+
+# Crediti: @ilham_Maulana
+
+#
+
 """ Userbot module for getting information about the server. """
 
 import platform
@@ -198,13 +214,13 @@ async def pipcheck(pip):
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     output = ("**▬▬▬▬▬ ❴✪❵ SYSTEM ❴✪❵ ▬▬▬▬▬**\n\n"
-              f"**> Telethon:** {version.__version__}\n"
-              f"**> Python:** {versions.__python_version__}\n"
-              f"**> Firmware:** 13.7\n"
-              f"**> Licenza:** 1.45.0\n"
-              f"**> Copyright:** 999999\n"
-              "**> [UPDATE](https://t.me/ilham_Maulana1)\n**"
-              f"**> 👤 USER**: {DEFAULTUSER}\n\n"
+              f"> Telethon: {version.__version__}\n"
+              f"> Python: {versions.__python_version__}\n"
+              f"> Firmware: {versions.__version__}\n"
+              f"> Licenza: {versions.__license__}\n"
+              f"> Copyright: {versions.__copyright__}\n"
+              "> [UPDATE](https://t.me/IOIIOIIIOIIOI)\n**"
+              f"> 👤 USER: {DEFAULTUSER}\n\n"
               "▬▬▬▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬▬▬▬")
 
     if ALIVE_LOGO:
