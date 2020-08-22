@@ -1,24 +1,8 @@
-# Copyright © 2020 di ilham94 Github, <https://github.com/ilham94>.
-
+# Copyright (C) 2019 The Raphielscape Company LLC.
 #
-
-# Questo file fa parte del progetto <https://github.com/Ilham94/OneChan>,
-
-# e viene rilasciato in base alla "Licenza GNU Affero General Public v3.0".
-
-# Si prega di consultare
-# <https://github.com/Ilham94/OneChan/blob/master/LICENSE>
-
+# Licensed under the Raphielscape Public License, Version 1.d (the "License");
+# you may not use this file except in compliance with the License.
 #
-
-# Tutti i diritti riservati.
-
-#
-
-# Crediti: @ilham_Maulana
-
-#
-
 """ Userbot module for getting information about the server. """
 
 import platform
@@ -27,7 +11,7 @@ from asyncio import create_subprocess_exec as asyncrunapp
 from asyncio.subprocess import PIPE as asyncPIPE
 from datetime import datetime
 from os import remove
-from platform import uname
+from platform import python_version, uname
 from shutil import which
 
 import psutil
@@ -225,7 +209,6 @@ async def amireallyalive(alive):
               f"┣[ 💻 `Running  : {repo.active_branch.name} `\n"
               f"┣[ 🗃 `Modules  : {len(modules)} `\n"
               f"┗━━━━━━━━━━━━━━━━━━━━━━━\n")
-
     if ALIVE_LOGO:
         logo = ALIVE_LOGO
         await bot.send_file(alive.chat_id, logo, caption=output)
