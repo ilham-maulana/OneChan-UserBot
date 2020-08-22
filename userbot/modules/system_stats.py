@@ -6,13 +6,14 @@
 
 # e viene rilasciato in base alla "Licenza GNU Affero General Public v3.0".
 
-# Si prega di consultare <https://github.com/Ilham94/OneChan/blob/master/LICENSE>
+# Si prega di consultare
+# <https://github.com/Ilham94/OneChan/blob/master/LICENSE>
 
 #
 
 # Tutti i diritti riservati.
 
-# 
+#
 
 # Crediti: @ilham_Maulana
 
