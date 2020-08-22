@@ -218,7 +218,6 @@ async def amireallyalive(alive):
               f"┣[👤 USER: {DEFAULTUSER}\n"
               f"┣[🐍 `Python   : {python_version()} `\n"
               f"┣[⚙️ `Telethon : {version.__version__} `\n"
-              f"┣[ 💻 `Running  : {repo.active_branch.name} `\n"
               f"┣[🗃 `Modules  : {len(modules)} `\n"
               "▬▬▬▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬▬▬▬")
 
