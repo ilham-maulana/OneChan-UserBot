@@ -215,7 +215,7 @@ async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     output = ("Hi masTer Bot Telah Aktif.......\n"
               f"**▬▬▬▬▬ ❴✪❵ SYSTEM ❴✪❵ ▬▬▬▬▬**\n"
-              f"> 👤 USER: {DEFAULTUSER}\n\n"
+              f"> 👤 USER: {DEFAULTUSER}\n"
               f"> 💻 `Running  : {repo.active_branch.name} `\n"
               f"> ⚙️ `Telethon : {version.__version__} `\n"
               f"> 🗃 `Modules  : {len(modules)} `\n"
