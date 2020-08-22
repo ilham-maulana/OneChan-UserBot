@@ -213,10 +213,12 @@ async def pipcheck(pip):
 @register(outgoing=True, pattern=r"^.(alive|on)$")
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
-    output = ("**▬▬▬▬▬ ❴✪❵ SYSTEM ❴✪❵ ▬▬▬▬▬**\n\n"
-              f"> Telethon: {version.__version__}\n"
-              "> [UPDATE](https://t.me/ilham_maulana1)\n**"
+    output = (Hi MaxTer Bot Telah Aktif Running on>{repo.active_branch.name}`\n"
+              f"**▬▬▬▬▬ ❴✪❵ SYSTEM ❴✪❵ ▬▬▬▬▬**\n"
               f"> 👤 USER: {DEFAULTUSER}\n\n"
+              f"> 💻 `Running  : {repo.active_branch.name} `\n"
+              f"> ⚙️ `Telethon : {version.__version__} `\n"
+              f"> 🗃 `Modules  : {len(modules)} `\n"
               "▬▬▬▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬▬▬▬")
 
     if ALIVE_LOGO:
