@@ -213,14 +213,13 @@ async def pipcheck(pip):
 @register(outgoing=True, pattern=r"^.(alive|on)$")
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
-    output = (
-        "Hi masTer Bot Telah Aktif.......\n"
+    output = ( "Hi masTer Bot Telah Aktif.......\n"
         f"**▬▬▬▬▬ ❴✪❵ SYSTEM ❴✪❵ ▬▬▬▬▬**\n"
         f"> 👤 USER: {DEFAULTUSER}\n"
         f"> 💻 `Running  : {repo.active_branch.name} `\n"
         f"> ⚙️ `Telethon : {version.__version__} `\n"
-        f"> 🗃 `Modules : {len(modules)} `\n"
-        f"> 👨‍🔧 `Creator    : [i̞̟̫̺ͭ̒ͭͣlͬ̍ͤ͆h͚̖̜̍̃͐a̘̫͈̭͌͛͌̇̇̍m̘͈̺̪͓ͩ͂̾ͪ̀̋ Ma̘̫͈̭͌͛͌̇̇̍u̟͎̲͕̼ͮͫͭ̋ͭ͛ͣ̈lͬ̍ͤa̘̫͈̭͌͛͌̇̇̍n̋̋̔ͧa͌͛](t.me/ilham_Maulana1) `\n"
+        f"> 🗃 `Modules  : {len(modules)} `\n"
+        f"> 👨‍🔧 `Creator  : [i̞̟̫̺ͭ̒ͭͣlͬ̍ͤ͆h͚̖̜̍̃͐a̘̫͈̭͌͛͌̇̇̍m̘͈̺̪͓ͩ͂̾ͪ̀̋ Ma̘̫͈̭͌͛͌̇̇̍u̟͎̲͕̼ͮͫͭ̋ͭ͛ͣ̈lͬ̍ͤa̘̫͈̭͌͛͌̇̇̍n̋̋̔ͧa͌͛](t.me/ilham_Maulana1) `\n"
         f"> 🐍 `Python   : {python_version()} `\n"
         "▬▬▬▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬▬▬▬")
 
