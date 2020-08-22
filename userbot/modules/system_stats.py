@@ -216,11 +216,11 @@ async def amireallyalive(alive):
     output = (
         "Hi masTer Bot Telah Aktif.......\n"
         f"**▬▬▬▬▬ ❴✪❵ SYSTEM ❴✪❵ ▬▬▬▬▬**\n"
-        f"> 👤 USER        : {DEFAULTUSER}\n"
-        f"> 💻 `Running  : {repo.active_branch.name} `\n"
+        f"> 👤 USER: {DEFAULTUSER}\n"
+        f"> 🐍 `Python   : {python_version()} `\n"
         f"> ⚙️ `Telethon : {version.__version__} `\n"
-        f"> 🗃 `Modules : {len(modules)} `\n"
-        f"> 🐍 `Python    : {python_version()} `\n"
+        f"> 💻 `Running  : {repo.active_branch.name} `\n"
+        f"> 🗃 `Modules  : {len(modules)} `\n"
         "▬▬▬▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬▬▬▬")
 
     if ALIVE_LOGO:
