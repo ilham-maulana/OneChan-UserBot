@@ -11,6 +11,7 @@
 from userbot import CMD_HELP
 from userbot.events import register
 
+
 @register(outgoing=True, pattern="^.help(?: |$)(.*)")
 async def help(event):
 """ For .help command,"""
@@ -36,4 +37,3 @@ await event.edit(f"{head}\
 \n{separator}\
 \n{head4}\
 \n\n{string}")
-
