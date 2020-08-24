@@ -6,12 +6,6 @@ from userbot import (TEMP_DOWNLOAD_DIRECTORY, CMD_HELP, bot)
 from userbot.events import register
 import os
 from telethon.tl.types import (
-    DocumentAttributeFilename,
-    DocumentAttributeSticker,
-    InputMediaUploadedDocument,
-    InputPeerNotifySettings,
-    InputStickerSetID,
-    InputStickerSetShortName,
     MessageMediaPhoto)
 
 
