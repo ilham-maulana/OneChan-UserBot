@@ -19,7 +19,7 @@ async def help(event):
         else:
             await event.edit("Please specify a valid module name.")
     else:
-        head = "**Help for** [Aone-Kangbot](https://github.com/aone-id/aone-kangbot)"
+        head = "**Help for** OneChan-UserBot"
         head2 = "For more information to use command,"
         head3 = "send `.help <module name>`"
         head4 = "List for all available command below: "
