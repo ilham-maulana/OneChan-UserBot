@@ -15,6 +15,3 @@ CMD_HELP.update({
     "p": ".P\
     \nUsage: Type .P untuk type Salam. "
 })
-
-
-
