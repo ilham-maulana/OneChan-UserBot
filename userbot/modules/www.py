@@ -62,9 +62,9 @@ async def neardc(event):
                      f"This Datacenter : `{result.this_dc}`")
 
 
-@register(outgoing=True, pattern="^.ping$")
+@register(outgoing=True, pattern="^Ping$")
 async def pingme(pong):
-    """ For .ping command, ping the userbot from any chat.  """
+    """ For Ping command, ping the userbot from any chat.  """
     start = datetime.now()
     await pong.edit("`Pong!`")
     end = datetime.now()
@@ -79,5 +79,5 @@ CMD_HELP.update(
     {"dc": ".dc\
     \nUsage: Finds the nearest datacenter from your server."})
 CMD_HELP.update(
-    {"ping": ".ping\
+    {"ping": "Ping\
     \nUsage: Shows how long it takes to ping your bot."})
