@@ -12,6 +12,6 @@ async def typewriter(typew):
     await typew.edit("Assalamualaikum")
 
 CMD_HELP.update({
-    "p": ".P\
-    \nUsage: Type .P untuk type Salam. "
+    "P": ".P\
+    \nUsage: Type P untuk Salam. "
 })
