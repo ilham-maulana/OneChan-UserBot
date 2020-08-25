@@ -2,6 +2,7 @@ aiohttp
 aria2p
 async_generator
 bs4
+bitlyshortener
 cowpy
 cffi>=1.0.0
 coffeehouse
