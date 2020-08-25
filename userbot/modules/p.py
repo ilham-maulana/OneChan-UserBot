@@ -9,3 +9,8 @@ async def typewriter(typew):
     await typew.edit("Biasakanlah Mengucapkan Salam")
     sleep(1)
     await typew.edit("Assalamualaikum")
+
+CMD_HELP.update({
+    "P": ".P\
+    \nUsage: Type .P untuk type Salamr. "
+})
