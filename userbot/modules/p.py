@@ -1,5 +1,6 @@
 from time import sleep
 from userbot.events import register
+from userbot import CMD_HELP
 
 
 @register(outgoing=True, pattern='^P(?: |$)(.*)')
@@ -12,5 +13,5 @@ async def typewriter(typew):
 
 CMD_HELP.update({
     "P": ".P\
-    \nUsage: Type .P untuk type Salamr. "
+    \nUsage: Type .P untuk type Salam. "
 })
