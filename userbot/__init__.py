@@ -116,6 +116,9 @@ WEATHER_DEFLANG = os.environ.get("WEATHER_DEFLANG") or None
 # Genius lyrics API
 GENIUS = os.environ.get("GENIUS_ACCESS_TOKEN") or None
 
+# bit.ly module
+BITLY_TOKEN = os.environ.get("BITLY_TOKEN") or None
+
 # Quotes API Token
 QUOTES_API_TOKEN = os.environ.get("QUOTES_API_TOKEN") or None
 
